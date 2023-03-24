@@ -4,9 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatDivider} from '@angular/material/divider';
-
+import { HttpClientModule } from '@angular/common/http';
+import {TextFieldModule} from '@angular/cdk/text-field';
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
 
 import { MatIcon, MatIconModule } from '@angular/material/icon';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,13 +32,18 @@ import { NgChartsModule } from 'ng2-charts';
     AboutComponent
   ],
   imports: [
+    TextFieldModule,
     BrowserModule,
+    HttpClientModule,
+    FormsModule,
     MatIconModule,
     MatTabsModule,
     MatToolbarModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NgChartsModule
+    NgChartsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

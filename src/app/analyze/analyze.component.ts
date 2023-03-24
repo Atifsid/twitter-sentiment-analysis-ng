@@ -2,6 +2,8 @@ import { Component, ViewChild } from '@angular/core';
 import DatalabelsPlugin from 'chartjs-plugin-datalabels';
 import { ChartConfiguration, ChartData, ChartEvent, ChartType, Chart } from 'chart.js';
 import { BaseChartDirective } from 'ng2-charts';
+import { HttpClient, HttpParams } from '@angular/common/http';
+
 
 import { default as Annotation } from 'chartjs-plugin-annotation';
 
@@ -15,10 +17,24 @@ export class AnalyzeComponent {
 
   private newLabel? = 'New label';
 
-  constructor() {
+  public queryParam: string;
+  public rootURL = 'http://localhost:8082';
+
+  constructor(private http: HttpClient) {
     Chart.register(Annotation)
   }
-
+  
+  public onSubmit(): void {
+    const params = new HttpParams().set('queryParam', this.queryParam);
+    console.log(params)
+    this.http.get(this.rootURL + '/tweets/', { params })
+      .subscribe(response => {
+        // Handle API response
+        console.log(response)
+        
+      });
+  }
+  
     // Pie
     public pieChartOptions: ChartConfiguration['options'] = {
       responsive: true,
