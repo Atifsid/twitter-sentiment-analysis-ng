@@ -13,11 +13,11 @@ export class AnalyzeService {
 
   public queryParam: string;
 
-  rootURL = 'http://localhost:8082';
+  rootURL = 'http://localhost:8081';
 
   public getTweets(query: string): Observable<Tweets> {
     let queryParams = new HttpParams().append("query",query);
-    return this.http.get<Tweets>(this.rootURL + '/tweets?query=');
+    return this.http.get<Tweets>(this.rootURL + '/tweets', {params:queryParams});
   }
 
   public getAnalysis(): Observable<Result>{

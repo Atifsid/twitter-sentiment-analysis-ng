@@ -25,16 +25,23 @@ export class AnalyzeComponent {
   }
   
   public onSubmit(): void {
-    const params = new HttpParams().set('queryParam', this.queryParam);
+    const params = new HttpParams().set('query', this.queryParam);
     console.log(params)
-    this.http.get(this.rootURL + '/tweets/', { params })
+    this.http.get(this.rootURL + '/tweets', { params })
       .subscribe(response => {
         // Handle API response
-        console.log(response)
-        
+        console.log(response)  
       });
   }
   
+  public onAnalyze(): void {
+    this.http.get(this.rootURL + '/analyze')
+      .subscribe(response => {
+        // Handle API response
+        console.log(response)   
+      });
+  }
+
     // Pie
     public pieChartOptions: ChartConfiguration['options'] = {
       responsive: true,
