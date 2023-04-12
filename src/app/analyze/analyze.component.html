@@ -1,32 +1,12 @@
 <mat-form-field>
-  <input matInput [(ngModel)]="queryParam" name="queryParam">
+  <input matInput type="text" [(ngModel)]="queryParam" name="queryParam">
 </mat-form-field>
-<button (click)="onSubmit()">Submit</button>
-<button (click)="onAnalyze()">Analyze</button>
+
+<button (click)="onSubmit(queryParam)">Analyze</button>
+<button (click)="onGetSentiments()">GetSentiments</button>
 
 
-<div class="pie-chart-wrapper">
-    <canvas baseChart class="chart"
-        [data]="pieChartData"
-        [type]="pieChartType"
-        [options]="pieChartOptions"
-        [plugins]="pieChartPlugins">
-</canvas>
-</div>
-
-<div class="line-chart-wrapper">
-<canvas baseChart class="chart"
-        [data]="lineChartData"
-        [options]="lineChartOptions"
-        [type]="lineChartType"
-        (chartHover)="chartHovered($event)"
-        (chartClick)="chartClicked($event)"></canvas>
-<table>
-  <tr>
-    <th *ngFor="let label of lineChartData.labels">{{label}}</th>
-  </tr>
-  <tr *ngFor="let d of lineChartData.datasets; let i=index" [class]="'line-'+i">
-    <td *ngFor="let label of lineChartData.labels; let j=index">{{d && d.data[j]}}</td>
-  </tr>
-</table>
+<div class="chart-wrapper">
+  <app-pie-chart #pie></app-pie-chart>
+  <app-polar-area-chart #polar></app-polar-area-chart>
 </div>

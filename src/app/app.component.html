@@ -1,15 +1,9 @@
 <mat-toolbar color="primary">
     <span>Twitter Sentiment Analysis</span>
-    <span class="example-fill-remaining-space"></span>  
+    <button mat-button routerLink="/Home" routerLinkActive="mat-button-active">Home</button>
+    <button mat-button routerLink="/Analyze" routerLinkActive="mat-button-active">Analyze</button>
+    <button mat-button routerLink="/Compare" routerLinkActive="mat-button-active">Compare</button>
+    <button mat-button routerLink="/Product" routerLinkActive="mat-button-active">Product</button>
+    <button mat-button routerLink="/About" routerLinkActive="mat-button-active">About</button>
   </mat-toolbar>
-  
-  <nav mat-tab-nav-bar>
-    <a mat-tab-link
-    *ngFor="let link of navLinks"
-    [routerLink]="link.label"
-    routerLinkActive #rla="routerLinkActive"
-    [active]="rla.isActive">
-   {{link.label}}
-  </a>
-  </nav>
-  <router-outlet></router-outlet>
+<router-outlet></router-outlet>

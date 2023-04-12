@@ -27,11 +27,11 @@ export class AppComponent {
             index: 2
         }, {
           label: 'Product',
-          link: './third',
+          link: './forth',
           index: 3
       }, {
         label: 'About',
-        link: './third',
+        link: './fifth',
         index: 4
     }, 
     ];

@@ -1,0 +1,53 @@
+.header {
+    height: 500px;
+    padding: 60px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+  }
+  
+#app-name {
+    text-align: start;
+    font-family: JosefinSans-Regular;
+    font-size: 50px;
+    margin-left: 100px;
+  }
+
+#lottie{
+    margin-left: 25%;
+    margin-right: 100px;
+    width: 500px;
+    height: 500px;
+}
+
+.card-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+#card-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+    height: 60%;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin-top: 20px;
+    width: 20%;
+    height: 400px;
+    margin-left: 40px;
+    transition: 0.3s;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .container {
+    padding: 2px 16px;
+  }

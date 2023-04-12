@@ -7,5 +7,10 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-
+  lottieOptions: any = {
+    path: 'assets/twitter.json',
+    renderer: 'svg',
+    autoplay: true,
+    loop: true,
+  };
 }

@@ -1,11 +1,7 @@
-.pie-chart-wrapper {
-    width:600px; 
-    margin: 0 auto;
-    margin-top: 100px;
-  }
-
-  .line-chart-wrapper {
-    width:600px; 
-    margin: 0 auto;
-    margin-top: 100px;
+.chart-wrapper { 
+  display: grid;
+  
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: 20px;
+  align-items: stretch;
   }

@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {TextFieldModule} from '@angular/cdk/text-field';
 import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import {MatCardModule} from '@angular/material/card';
 
 import { MatIcon, MatIconModule } from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -21,6 +22,15 @@ import { CompareComponent } from './compare/compare.component';
 import { ProductComponent } from './product/product.component';
 import { AboutComponent } from './about/about.component';
 import { NgChartsModule } from 'ng2-charts';
+import { LottieModule } from 'ngx-lottie';
+import { LottieAnimationComponent } from './lottie-animation/lottie-animation.component';
+import player from 'lottie-web';
+import { PieChartComponent } from './pie-chart/pie-chart.component';
+import { PolarAreaChartComponent } from './polar-area-chart/polar-area-chart.component';
+
+export function playerFactory() {
+  return player;
+}
 
 @NgModule({
   declarations: [
@@ -29,12 +39,16 @@ import { NgChartsModule } from 'ng2-charts';
     HomeComponent,
     CompareComponent,
     ProductComponent,
-    AboutComponent
+    AboutComponent,
+    LottieAnimationComponent,
+    PieChartComponent,
+    PolarAreaChartComponent,
   ],
   imports: [
     TextFieldModule,
     BrowserModule,
     HttpClientModule,
+    MatInputModule,
     FormsModule,
     MatIconModule,
     MatTabsModule,
@@ -43,7 +57,9 @@ import { NgChartsModule } from 'ng2-charts';
     BrowserAnimationsModule,
     NgChartsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatCardModule,
+    LottieModule.forRoot({ player: playerFactory }),
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
