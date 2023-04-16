@@ -8,11 +8,11 @@ import { CompareComponent } from './compare/compare.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/first', pathMatch: 'full' },
-  { path: 'Home', component:  HomeComponent},
-  { path: 'Analyze', component:  AnalyzeComponent},
-  { path: 'Compare', component: CompareComponent},
-  { path: 'About', component: AboutComponent},
-  { path: 'Product', component: ProductComponent},
+  { path: 'home', component:  HomeComponent},
+  { path: 'analyze', component:  AnalyzeComponent},
+  { path: 'compare', component: CompareComponent},
+  { path: 'about', component: AboutComponent},
+  { path: 'product', component: ProductComponent},
 ];
 export const appRouting = RouterModule.forRoot(routes);
 @NgModule({

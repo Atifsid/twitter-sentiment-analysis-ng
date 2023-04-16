@@ -1,6 +1,17 @@
-<mat-form-field>
+<div class="hero">
+    <div class="container">
+      <form action="" class="searchbar">
+          <input type="text" placeholder="Get The Analysis" id="" [(ngModel)]="queryParam" name="queryParam">
+          <button (click)="onGetSentiments()" type="submit"><img src="src\assets\search.png" alt=""></button>
+      </form>
+    </div>
+</div>
+
+
+
+<!-- <mat-form-field>
   <input matInput type="text" [(ngModel)]="queryParam" name="queryParam">
-</mat-form-field>
+</mat-form-field> -->
 
 <button (click)="onSubmit(queryParam)">Analyze</button>
 <button (click)="onGetSentiments()">GetSentiments</button>

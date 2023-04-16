@@ -27,6 +27,7 @@ import { LottieAnimationComponent } from './lottie-animation/lottie-animation.co
 import player from 'lottie-web';
 import { PieChartComponent } from './pie-chart/pie-chart.component';
 import { PolarAreaChartComponent } from './polar-area-chart/polar-area-chart.component';
+import { NavComponent } from './nav/nav.component';
 
 export function playerFactory() {
   return player;
@@ -43,6 +44,7 @@ export function playerFactory() {
     LottieAnimationComponent,
     PieChartComponent,
     PolarAreaChartComponent,
+    NavComponent,
   ],
   imports: [
     TextFieldModule,

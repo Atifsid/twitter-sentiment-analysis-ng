@@ -25,6 +25,7 @@
 .card-wrapper{
     display: flex;
     justify-content: center;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
 }
 
 #card-img{
@@ -37,6 +38,8 @@
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 20px;
+    background: #fff;
     margin-top: 20px;
     width: 20%;
     height: 400px;
@@ -50,4 +53,7 @@
   
   .container {
     padding: 2px 16px;
+  }
+  .card-title{
+    text-align: center;
   }
