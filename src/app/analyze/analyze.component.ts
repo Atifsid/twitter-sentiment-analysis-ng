@@ -5,7 +5,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 
 
 import { default as Annotation } from 'chartjs-plugin-annotation';
-import { Sentiment } from './model';
+import { Sentiment, Tweet } from './model';
 import { PieChartComponent } from '../pie-chart/pie-chart.component';
 import { PolarAreaChartComponent } from '../polar-area-chart/polar-area-chart.component';
 
@@ -26,6 +26,7 @@ export class AnalyzeComponent {
   public sentiment: Sentiment = {}
   public resData: number[] = []
   public commonLabels = ['negative', 'neutral', 'positive', 'realnegative', 'realpositive']
+  public tweets: Array<Tweet> = []
 
   constructor(private http: HttpClient) {
     Chart.register(Annotation)
@@ -67,8 +68,12 @@ export class AnalyzeComponent {
     const params = new HttpParams().set('query', queryParam);
     this.http.get(this.rootURL + '/tweets', { params })
       .subscribe(response => {
-        // Tweets Fetched
-        console.log(response)  
+        this.tweets = []
+        let body = JSON.parse(JSON.stringify(response));
+        for (let index = 0; index < 100; index++) {
+          this.tweets.push(body.data[index])
+        } 
+        console.log(body.data)  
       });
 
       this.http.get(this.rootURL + '/analyze')
@@ -84,6 +89,17 @@ export class AnalyzeComponent {
       .subscribe(response => {
         // Handle API response
         console.log(response)   
+      });   
+  }
+
+  onGetTweets(){
+    this.http.get(this.rootURL + '/fetchTweets')
+      .subscribe(response => {
+        // Handle API response
+        let tweets= JSON.parse(JSON.stringify(response))
+        for (let index = 0; index < 100; index++) {
+          this.tweets.push(tweets[index])
+        } 
       });   
   }
 }

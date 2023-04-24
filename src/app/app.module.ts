@@ -28,6 +28,10 @@ import player from 'lottie-web';
 import { PieChartComponent } from './pie-chart/pie-chart.component';
 import { PolarAreaChartComponent } from './polar-area-chart/polar-area-chart.component';
 import { NavComponent } from './nav/nav.component';
+import { IphoneComponent } from './iphone/iphone.component';
+import { OneplusComponent } from './oneplus/oneplus.component';
+import { MacbookComponent } from './macbook/macbook.component';
+import { SkullcandyComponent } from './skullcandy/skullcandy.component';
 
 export function playerFactory() {
   return player;
@@ -45,6 +49,10 @@ export function playerFactory() {
     PieChartComponent,
     PolarAreaChartComponent,
     NavComponent,
+    IphoneComponent,
+    OneplusComponent,
+    MacbookComponent,
+    SkullcandyComponent,
   ],
   imports: [
     TextFieldModule,

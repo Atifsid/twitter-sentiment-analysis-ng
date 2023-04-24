@@ -2,22 +2,34 @@
     <div class="container">
       <form action="" class="searchbar">
           <input type="text" placeholder="Get The Analysis" id="" [(ngModel)]="queryParam" name="queryParam">
-          <button (click)="onGetSentiments()" type="submit"><img src="src\assets\search.png" alt=""></button>
+          <button (click)="onSubmit(queryParam)" type="submit"><img src="assets/search.png" alt=""></button>
       </form>
     </div>
 </div>
 
-
-
-<!-- <mat-form-field>
-  <input matInput type="text" [(ngModel)]="queryParam" name="queryParam">
-</mat-form-field> -->
-
 <button (click)="onSubmit(queryParam)">Analyze</button>
 <button (click)="onGetSentiments()">GetSentiments</button>
+<button (click)="onGetTweets()">GetTweets</button>
 
+<table class="table">
+  <th>Id</th>
+  <th>UserName</th>
+  <th>Tweet</th>
+  <th>Created At</th>
+
+<tr *ngFor="let tweet of tweets; let i = index">
+  <td>{{ i + 1 }}</td>
+  <td>{{ tweet.userName }}</td>
+  <td>{{ tweet.tweetText }}</td>
+  <td>{{ tweet.createdAt }}</td>
+</tr>
+</table>
 
 <div class="chart-wrapper">
-  <app-pie-chart #pie></app-pie-chart>
-  <app-polar-area-chart #polar></app-polar-area-chart>
+  <div class="pie-chart">
+    <app-pie-chart #pie></app-pie-chart>
+  </div>
+  <div class="polar-chart">
+    <app-polar-area-chart #polar></app-polar-area-chart>
+  </div>
 </div>

@@ -1,5 +1,4 @@
 export interface Tweet {
-    id: Number;
     userName: string;
     tweetText:string;
     createdAt: string;

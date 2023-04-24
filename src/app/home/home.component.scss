@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Josefin+Sans&display=swap');
+*{
+  font-family: 'Josefin Sans', sans-serif;
+}
 .header {
     height: 500px;
     padding: 60px;
     background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    background-image: linear-gradient(to right top, #202d41, #26385b, #314374, #434c8e, #5b54a6);
     color: white;
     display: flex;
     align-items: center;
@@ -10,7 +14,8 @@
   
 #app-name {
     text-align: start;
-    font-family: JosefinSans-Regular;
+    // font-family: JosefinSans-Regular;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 50px;
     margin-left: 100px;
   }
@@ -25,7 +30,7 @@
 .card-wrapper{
     display: flex;
     justify-content: center;
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    // background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
 }
 
 #card-img{
@@ -57,3 +62,25 @@
   .card-title{
     text-align: center;
   }
+  .sec{
+    position: relative;
+    padding: 100px;
+    background-image: linear-gradient(to left, #584b87, #403a6c, #2b2952, #171a38, #050421);
+}
+
+.sec h2{
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #fff;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.sec p{
+    font-size: 1.5em;
+    line-height: 1.2;
+    color: #fff;
+}
+.list{
+  color: #fff;
+  font-size: 1.5em;
+    line-height: 1.2;
+}

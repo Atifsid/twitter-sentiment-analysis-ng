@@ -1,27 +1,19 @@
 <div class="hero" >
     <nav>
-        <h2 class="logo"> Sentiment <span>Analysis</span> </h2>
+        <h2 class="logo"> Sentiment<span>Analysis</span> </h2>
         <ul class="nav-links">
             <li><a routerLink="home" >Home</a> </li>
-            <!-- home analyse compare product about -->
             <li><a routerLink="analyze">Analyze</a></li>
             <li><a routerLink="compare">Compare</a></li>
             
-            <li>
-              <div class="item" >
-
-
-                <a href="#" class="desktop-item">Products</a>
-              
-
-
-                <input type="checkbox" id="showMega">
-                <label for="showMega" class="mobile-item">Products</label>
+            <li  (click)="toggleContent()">
+                <a>Products</a>
                 
                 <div class="content" >
-                <div class="mega-box">
+                <div class="mega-box" *ngIf="isContentVisible ">
                   <div class="content">
-                     <div class="row">
+                     
+                    <div class="row">
                       <header class="he">Phones</header>
                       <ul class="mega-links">
                         <li><a routerLink="iphone">Apple</a></li>
@@ -30,6 +22,7 @@
                         <li><a href="#">Vivo</a></li>
                       </ul>
                     </div>
+                    
                     <div class="row">
                       <header class="he">Laptop</header>
                       <ul class="mega-links">
@@ -39,6 +32,7 @@
                         <li><a href="#">Lenovo</a></li>
                       </ul>
                     </div>
+                    
                     <div class="row">
                       <header class="he">Headphones</header>
                       <ul class="mega-links">
@@ -48,8 +42,8 @@
                         <li><a href="#">JBL</a></li>
                       </ul>
                     </div>
+
                   </div>
-                </div>
                 </div>
 
 

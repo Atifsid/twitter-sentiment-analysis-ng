@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent {
+  isContentVisible = false;
 
+  showContent() {
+    this.isContentVisible = true;
+  }
+
+  toggleContent() {
+    this.isContentVisible = !this.isContentVisible;
+  }
 }
