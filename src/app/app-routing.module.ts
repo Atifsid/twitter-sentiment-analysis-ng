@@ -11,7 +11,7 @@ import { OneplusComponent } from './oneplus/oneplus.component';
 import { SkullcandyComponent } from './skullcandy/skullcandy.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/first', pathMatch: 'full' },
+  { path: '', component:  HomeComponent },
   { path: 'home', component:  HomeComponent},
   { path: 'analyze', component:  AnalyzeComponent},
   { path: 'compare', component: CompareComponent},

@@ -67,5 +67,33 @@
      width: 100%;
      border: solid red 2px;
   }
+  .table, th, td{
+    border: 1px solid black;
+    padding: 10px;
+    display: flexbox;
+    margin: 0 auto;
+}
+.polar-chart { 
+    align-items: center;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+}
+.pie-chart { 
+        align-items: center;
+          padding: 10px;
+          display: flex;
+          justify-content: center;
+          margin: 0 auto;
+}
+.bar-chart { 
+          align-items: center;
+          padding: 10px;
+          display: flex;
+          justify-content: center;
+          margin: 0 auto;
+        }
+  
   
   

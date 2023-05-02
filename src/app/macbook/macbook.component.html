@@ -2,26 +2,26 @@
   
     <mat-card class="example-card">
          <div class="my-moving-text">
-           <div>Apple 2020 MacBook Air</div>
+           <div>{{macBook[0]}}</div>
          </div>
          <img class="same-size-img" src="assets/mac2020.jpg" alt="Example Image">
-         <button class="my-button">Get The Analysis</button>
+         <button class="my-button" (click)="getAnalysis(macBook[0])">Get The Analysis</button>
      </mat-card>
     
      <mat-card class="example-card">
          <div class="my-moving-text">
-          <div>Apple 2021 MacBook Pro</div>
+          <div>{{macBook[1]}}</div>
          </div>
          <img class="same-size-img" src="assets/mac2021.jpg" alt="Example Image">
-         <button class="my-button">Get The Analysis</button>
+         <button class="my-button" (click)="getAnalysis(macBook[1])">Get The Analysis</button>
      </mat-card>
     
      <mat-card class="example-card">
          <div class="my-moving-text">
-           <div>Apple 2022 MacBook Air</div>
+           <div>{{macBook[2]}}</div>
          </div>
          <img class="same-size-img" src="assets/mac2022.jpg" alt="Example Image">
-         <button class="my-button">Get The Analysis</button>
+         <button class="my-button" (click)="getAnalysis(macBook[2])">Get The Analysis</button>
      </mat-card>
    
      <!-- <mat-card class="example-card">
@@ -34,4 +34,33 @@
   
     
   
+   </div>
+
+   <button (click)="onGetTweets()"><img src="assets/search.png" alt=""></button>
+   <button (click)="onGetSentiments()"><img src="assets/search.png" alt=""></button>    
+
+    <table *ngIf="isTableVisible" class="table">
+     <th>Id</th>
+     <th>UserName</th>
+     <th>Tweet</th>
+     <th>Created At</th>
+   
+   <tr *ngFor="let tweet of tweets; let i = index">
+     <td>{{ i + 1 }}</td>
+     <td>{{ tweet.userName }}</td>
+     <td>{{ tweet.tweetText }}</td>
+     <td>{{ tweet.createdAt }}</td>
+   </tr>
+   </table>
+   
+   <div *ngIf="isChartVisible" class="chart-wrapper">
+     <div class="pie-chart">
+       <app-pie-chart #pie></app-pie-chart>
+     </div>
+     <div class="polar-chart">
+       <app-polar-area-chart #polar></app-polar-area-chart>
+     </div>
+     <div class="bar-chart">
+       <app-bar-chart #bar></app-bar-chart>
+     </div>
    </div>

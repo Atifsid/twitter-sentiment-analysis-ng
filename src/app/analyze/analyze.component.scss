@@ -20,6 +20,17 @@
         justify-content: center;
         margin: 0 auto;
       }
+.bar-chart { 
+        //   display: grid;
+          
+        //   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        //   grid-gap: 20px;
+          align-items: center;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+          }
 
 // .chart-wrapper{
 //     background-image: linear-gradient(to right top, #202d41, #26385b, #314374, #434c8e, #5b54a6);
@@ -42,7 +53,7 @@
 .hero{
     height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(/assets/JumboContainer.png);
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(/assets/analyze.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -133,8 +144,7 @@ nav ul li a:hover{
 }
 
 .searchbar button img{
-    width: 25px;
-    
+    width: 25px;  
 }
 .searchbar button{
     border: 0;
@@ -147,4 +157,22 @@ nav ul li a:hover{
 .searchbar button:hover{
     transform: scale(1.2);
     cursor: pointer;
+}
+
+.container button{
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: #58629b;
+    cursor: pointer;
+}
+
+.container button:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.icon{
+    width: 25px;
 }

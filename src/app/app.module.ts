@@ -32,6 +32,8 @@ import { IphoneComponent } from './iphone/iphone.component';
 import { OneplusComponent } from './oneplus/oneplus.component';
 import { MacbookComponent } from './macbook/macbook.component';
 import { SkullcandyComponent } from './skullcandy/skullcandy.component';
+import { BarChartComponent } from './bar-chart/bar-chart.component';
+import {MatTableModule} from '@angular/material/table';
 
 export function playerFactory() {
   return player;
@@ -53,6 +55,7 @@ export function playerFactory() {
     OneplusComponent,
     MacbookComponent,
     SkullcandyComponent,
+    BarChartComponent,
   ],
   imports: [
     TextFieldModule,
@@ -66,6 +69,7 @@ export function playerFactory() {
     AppRoutingModule,
     BrowserAnimationsModule,
     NgChartsModule,
+    MatTableModule,
     MatFormFieldModule,
     MatCardModule,
     LottieModule.forRoot({ player: playerFactory }),

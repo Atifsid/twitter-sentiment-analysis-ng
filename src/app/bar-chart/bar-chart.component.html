@@ -1,0 +1,11 @@
+<mat-card>
+    <mat-card-content>Polar Area chart</mat-card-content>
+    <canvas baseChart class="chart"
+        [data]="barChartData"
+        [options]="barChartOptions"
+        [plugins]="barChartPlugins"
+        [type]="barChartType"
+        (chartHover)="chartHovered($event)"
+        (chartClick)="chartClicked($event)">
+</canvas>
+  </mat-card>

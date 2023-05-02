@@ -2,36 +2,62 @@
   
     <mat-card class="example-card">
          <div class="my-moving-text">
-           <div>OnePlus 10 3</div>
+           <div>{{onePlus[0]}}</div>
          </div>
          <img class="same-size-img" src="assets/10T-3.png" alt="Example Image">
-         <button class="my-button">Get The Analysis</button>
+         <button class="my-button" (click)="getAnalysis(onePlus[0])">Get The Analysis</button>
      </mat-card>
     
      <mat-card class="example-card">
          <div class="my-moving-text">
-           <div>OnePlus 9R</div>
+           <div>{{onePlus[1]}}</div>
          </div>
          <img class="same-size-img" src="assets/9op.png" alt="Example Image">
-         <button class="my-button">Get The Analysis</button>
+         <button class="my-button" (click)="getAnalysis(onePlus[1])">Get The Analysis</button>
      </mat-card>
     
      <mat-card class="example-card">
          <div class="my-moving-text">
-           <div>OnePlus 10 Pro</div>
+           <div>{{onePlus[2]}}</div>
          </div>
          <img class="same-size-img" src="assets/10pro-3.png" alt="Example Image">
-         <button class="my-button">Get The Analysis</button>
+         <button class="my-button" (click)="getAnalysis(onePlus[2])">Get The Analysis</button>
      </mat-card>
    
      <mat-card class="example-card">
          <div class="my-moving-text">
-           <div>OnePlus 9 Pro</div>
+           <div>{{onePlus[3]}}</div>
          </div>
          <img class="same-size-img" src="assets/9 pro.png" alt="Example Image">
-         <button class="my-button">Get The Analysis</button>
+         <button class="my-button" (click)="getAnalysis(onePlus[3])">Get The Analysis</button>
      </mat-card>
- 
-    
+   </div>
 
+   <button (click)="onGetTweets()"><img src="assets/search.png" alt=""></button>
+   <button (click)="onGetSentiments()"><img src="assets/search.png" alt=""></button>    
+
+    <table *ngIf="isTableVisible" class="table">
+     <th>Id</th>
+     <th>UserName</th>
+     <th>Tweet</th>
+     <th>Created At</th>
+   
+   <tr *ngFor="let tweet of tweets; let i = index">
+     <td>{{ i + 1 }}</td>
+     <td>{{ tweet.userName }}</td>
+     <td>{{ tweet.tweetText }}</td>
+     <td>{{ tweet.createdAt }}</td>
+   </tr>
+   </table>
+   
+   <div *ngIf="isChartVisible" class="chart-wrapper">
+     <div class="pie-chart">
+       <app-pie-chart #pie></app-pie-chart>
+     </div>
+     <div class="polar-chart">
+       <app-polar-area-chart #polar></app-polar-area-chart>
+     </div>
+     <div class="bar-chart">
+       <app-bar-chart #bar></app-bar-chart>
+     </div>
    </div>
