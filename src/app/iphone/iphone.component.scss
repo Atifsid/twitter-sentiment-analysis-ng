@@ -36,6 +36,11 @@
       width: 100%;
       height: 400px;
       }
+
+      .btns {
+        display: flex;
+        justify-content: center;
+      }
   
      .my-button:hover::before {
         transform: translateY(0);

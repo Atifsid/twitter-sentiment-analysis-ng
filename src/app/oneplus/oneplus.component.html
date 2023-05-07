@@ -33,8 +33,10 @@
      </mat-card>
    </div>
 
-   <button (click)="onGetTweets()"><img src="assets/search.png" alt=""></button>
-   <button (click)="onGetSentiments()"><img src="assets/search.png" alt=""></button>    
+   <div class="btns">
+    <button (click)="onGetTweets()"><img class="btnImg" src="assets/table.png" alt="" height="100px" width="100px"></button>
+    <button (click)="onGetSentiments()"><img src="assets/bar-chart.png" alt="" height="100px" width="100px"></button>
+  </div>   
 
     <table *ngIf="isTableVisible" class="table">
      <th>Id</th>
